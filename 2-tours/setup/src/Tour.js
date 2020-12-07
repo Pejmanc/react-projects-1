@@ -15,7 +15,7 @@ const Tour = ({ id, info, name, image, price }) => {
         </p>
         <p>{price}</p>
       </div>
-      <button onClick={deleteTour(id)}>Not intersted</button>
+      <button>Not intersted</button>
     </div>
   );
 };
