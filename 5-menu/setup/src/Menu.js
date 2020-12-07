@@ -1,6 +1,6 @@
 import React from "react";
 
-const Menu = ({ title, category, price, img, desc }) => {
+const Menu = ({ title, price, img, desc }) => {
   return (
     <article className="menu-item">
       <img className="photo" src={img} alt={title} />

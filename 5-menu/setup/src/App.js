@@ -20,7 +20,12 @@ function App() {
       <section className="menu">
         <h2 className="title">Our Menu</h2>
         <div className="underline"></div>
-        <Categories filterItems={filterItems} />
+        {allItems.map((item) => (
+          <div className="flex-cat">
+            <Categories filterItems={filterItems} category={item.category} />
+          </div>
+        ))}
+
         {allItems.map((item) => (
           <Menu key={item.id} {...item} />
         ))}
