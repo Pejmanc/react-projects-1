@@ -5,12 +5,17 @@ import items from "./data";
 const App = () => {
   const [allItems, setAllItems] = useState(items);
 
+  const filterItems = (category) => {
+    const filteredItems = items.filter((item) => item.category === category);
+    setAllItems(filteredItems);
+  };
+
   return (
     <main>
       <article>
         <h1>Our Menu</h1>
         <div className="underline"></div>
-        <Categories />
+        <Categories filterItems={filterItems} />
         {allItems.map((item) => (
           <Menu key={item.id} {...item} />
         ))}
