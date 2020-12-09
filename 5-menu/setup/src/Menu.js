@@ -1,8 +1,13 @@
 import React from "react";
 
 const Menu = ({ title, price, img, desc }) => {
+  const filterItems = (category) => {
+    const filteredItems = items.filter((item) => item.category === category);
+    setAllItems(filteredItems);
+  };
   return (
     <article className="menu">
+      <Categories filterItems={filterItems} />
       <div className="menu-item">
         <img className="photo" src={img} alt={title} />
         <div>
